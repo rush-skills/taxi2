@@ -27,6 +27,31 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaewk0hcgMCtAQkVfeBnCtiUTbYRXEJkw">
+    </script>
+
+    <script type="text/javascript">
+      function initialize() {
+      	var myLatlng = new google.maps.LatLng(28.61,77.20);
+        var mapOptions = {
+          center: { lat: 28.6139, lng: 77.2089},
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+        var marker = new google.maps.Marker({
+    	position: myLatlng,
+	    map: map,
+	    title:"Cab Availble!"
+	});
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
 
   <body>
@@ -50,13 +75,14 @@
       </div>
     </div>
 
-	<div id="headerwrap">
+	<div id="headerwrap" style="padding-top: 0px;margin-top:0px">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12" id="order_form">
 
-					<h1 >Ride details<br/></h1>
-					<h4>Almost good to go, just tell us more about you.<br/></h3><br/><br/>
+					<h1 >Locate Your Ride<br/></h1><br/><br/>
+						<div id="map-canvas" style="width:100%;height: 350px;margin-bottom: 20px;"></div>
+						<h3>Fastest Availble <b>XX:XX Minutes</b></h3>
 					<button type="submit" id="location2" class="btn btn-warning btn-lg">Pick up now</button>
 					<button type="submit" id="location2" class="btn btn-warning btn-lg">Schedule for later</button>
 				</div><!-- /col-lg-6 -->
