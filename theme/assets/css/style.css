@@ -4,3 +4,12 @@
 #location2{
 	padding: 8px 16px;
 }
+body{
+	background-color: yellow;
+}
+#order_form{
+	text-align: center;
+}
+#abcd{
+	width: 87%;
+}
