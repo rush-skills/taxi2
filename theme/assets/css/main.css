@@ -30,12 +30,12 @@ h1 {
 }
 
 h3 {
-	color: #95a5a6;
+	color: #070E15;
 	font-weight: 400;
 }
 
 h4 {
-	color: #95a5a6;
+	color: #070E15;
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -83,7 +83,7 @@ a:after {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #070E15;
     margin: 1em 0;
     padding: 0;
 }
