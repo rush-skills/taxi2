@@ -13,3 +13,9 @@ body{
 #abcd{
 	width: 87%;
 }
+.btn-warning {
+	background-color: #E88E0C;	
+}
+.fa-location-arrow {
+	color: #fff;
+}
